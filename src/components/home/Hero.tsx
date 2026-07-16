@@ -43,10 +43,11 @@ export default function Hero() {
         <div className="absolute left-1/2 top-[-10%] h-[60vh] w-[80vw] -translate-x-1/2 rounded-full bg-gold/[0.06] blur-[120px]" />
       </motion.div>
 
-      {/* Copy */}
+      {/* Copy — pt clears the fixed nav so the eyebrow never rides under it
+          on short (laptop-height) viewports. */}
       <motion.div
         style={{ y: copyY, opacity: copyOpacity }}
-        className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-center px-6 md:px-10"
+        className="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-center px-6 pt-28 md:px-10 md:pt-32"
       >
         <motion.p
           initial={{ opacity: 0, y: 20 }}
