@@ -15,10 +15,10 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  // Backdrop sinks and zooms while the copy lifts away faster — layered depth.
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "24%"]);
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
-  const copyY = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
+  // Backdrop sinks and keeps zooming in as you scroll away — dramatic depth.
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "26%"]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.35]);
+  const copyY = useTransform(scrollYProgress, [0, 1], ["0%", "-45%"]);
   const copyOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
@@ -26,14 +26,21 @@ export default function Hero() {
       ref={ref}
       className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden"
     >
-      {/* Full-bleed photograph with a soft cinematic scrim for light text */}
+      {/* Full-bleed photograph: cinematic zoom-out on load, zoom-in on scroll */}
       <motion.div style={{ y: bgY, scale: bgScale }} className="absolute inset-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/restaurant-hall.jpg"
-          alt="Frederick's Kitchen — the garden dining hall"
-          className="absolute inset-0 h-full w-full scale-105 object-cover"
-        />
+        <motion.div
+          initial={{ scale: 1.45 }}
+          animate={{ scale: 1.05 }}
+          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute inset-0"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/restaurant-hall.jpg"
+            alt="Frederick's Kitchen — the garden dining hall"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/75" />
         <div className="absolute inset-0 bg-black/15" />
       </motion.div>
@@ -59,14 +66,14 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        <h1 className="mt-7 font-display text-[clamp(2.75rem,7vw,5.75rem)] font-light leading-[1.02] tracking-[-0.02em] text-white">
+        <h1 className="mt-7 font-display text-[clamp(3rem,8vw,7rem)] font-light leading-[0.98] tracking-[-0.02em] text-white">
           {["An estate retreat", "high in the coffee hills"].map((line, i) => (
-            <span key={i} className="block overflow-hidden">
+            <span key={i} className="block overflow-hidden pb-[0.08em]">
               <motion.span
-                initial={{ y: "110%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1.1, delay: 0.45 + i * 0.12, ease: EASE }}
-                className="block"
+                initial={{ y: "118%", scale: 1.06 }}
+                animate={{ y: 0, scale: 1 }}
+                transition={{ duration: 1.2, delay: 0.5 + i * 0.14, ease: EASE }}
+                className="block origin-bottom"
               >
                 {line}
               </motion.span>
