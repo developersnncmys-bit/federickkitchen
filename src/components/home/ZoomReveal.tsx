@@ -69,7 +69,7 @@ export default function ZoomReveal() {
         {/* Big intro line, sitting over the small card, fading as you scroll in */}
         <motion.h2
           style={{ opacity: introOpacity, scale: introScale }}
-          className="pointer-events-none absolute px-6 text-center font-display text-[clamp(2.5rem,9vw,8rem)] font-light leading-[0.95] tracking-[-0.03em] text-cream"
+          className="pointer-events-none absolute z-10 px-6 text-center font-display text-[clamp(2.5rem,9vw,8rem)] font-light leading-[0.95] tracking-[-0.03em] text-white mix-blend-difference"
         >
           Come up
           <br />
