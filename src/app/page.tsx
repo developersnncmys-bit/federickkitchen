@@ -1,6 +1,6 @@
 import Hero from "@/components/home/Hero";
 import TrustStrip from "@/components/home/TrustStrip";
-import ZoomReveal from "@/components/home/ZoomReveal";
+import WelcomeIntro from "@/components/home/WelcomeIntro";
 import RoomsPreview from "@/components/home/RoomsPreview";
 import MarqueeBanner from "@/components/home/MarqueeBanner";
 import Pillars from "@/components/home/Pillars";
@@ -17,7 +17,7 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustStrip />
-      <ZoomReveal />
+      <WelcomeIntro />
       <RoomsPreview />
       <MarqueeBanner />
       <Story />
