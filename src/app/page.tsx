@@ -17,7 +17,9 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustStrip />
-      <WelcomeIntro />
+      <ComeIn>
+        <WelcomeIntro />
+      </ComeIn>
       <RoomsPreview />
       <MarqueeBanner />
       <Story />

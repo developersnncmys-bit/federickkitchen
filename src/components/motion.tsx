@@ -55,10 +55,10 @@ export function ComeIn({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 64, scale: 0.965 }}
+      initial={{ opacity: 0, y: 90, scale: 0.92 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: "-12% 0px -12% 0px" }}
-      transition={{ duration: 1, delay, ease: EASE }}
+      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+      transition={{ duration: 1.1, delay, ease: EASE }}
     >
       {children}
     </motion.div>
