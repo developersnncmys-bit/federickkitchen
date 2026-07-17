@@ -1,12 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Star, CalendarDays, Users, ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
+
+const SLIDES = [
+  "/images/restaurant-hall.jpg",
+  "/images/restaurant-wide.jpg",
+  "/images/lounge-brick.jpg",
+  "/images/exterior-tower.jpg",
+  "/images/restaurant-garden.jpg",
+];
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -21,29 +29,66 @@ export default function Hero() {
   const copyY = useTransform(scrollYProgress, [0, 1], ["0%", "-45%"]);
   const copyOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
+  // Auto-advancing image slideshow behind the copy.
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setSlide((s) => (s + 1) % SLIDES.length), 5000);
+    return () => clearInterval(t);
+  }, []);
+
   return (
     <section
       ref={ref}
       className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden"
     >
-      {/* Full-bleed photograph: cinematic zoom-out on load, zoom-in on scroll */}
+      {/* Full-bleed sliding slideshow: images cross-slide with a slow Ken-Burns
+          zoom; the whole layer also zooms in with scroll. */}
       <motion.div style={{ y: bgY, scale: bgScale }} className="absolute inset-0">
-        <motion.div
-          initial={{ scale: 1.45 }}
-          animate={{ scale: 1.05 }}
-          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute inset-0"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/restaurant-hall.jpg"
-            alt="Frederick's Kitchen — the garden dining hall"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </motion.div>
+        <AnimatePresence>
+          <motion.div
+            key={slide}
+            initial={{ opacity: 0, x: "8%" }}
+            animate={{ opacity: 1, x: "0%" }}
+            exit={{ opacity: 0, x: "-8%" }}
+            transition={{ duration: 1.5, ease: EASE }}
+            className="absolute inset-0"
+          >
+            <motion.div
+              initial={{ scale: 1.18 }}
+              animate={{ scale: 1.02 }}
+              transition={{ duration: 6.5, ease: "easeOut" }}
+              className="absolute inset-0"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={SLIDES[slide]}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </motion.div>
+          </motion.div>
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/75" />
         <div className="absolute inset-0 bg-black/15" />
       </motion.div>
+
+      {/* Slide indicators */}
+      <div className="absolute right-6 top-1/2 z-10 hidden -translate-y-1/2 flex-col gap-3 md:flex">
+        {SLIDES.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setSlide(i)}
+            aria-label={`Show slide ${i + 1}`}
+            className="group flex h-3 items-center"
+          >
+            <span
+              className={`block rounded-full transition-all duration-500 ${
+                slide === i ? "h-8 w-1 bg-gold-soft" : "h-1.5 w-1 bg-white/40 group-hover:bg-white/70"
+              }`}
+            />
+          </button>
+        ))}
+      </div>
 
       {/* Centred hero copy */}
       <motion.div
