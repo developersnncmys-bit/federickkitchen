@@ -5,7 +5,7 @@ import RoomsPreview from "@/components/home/RoomsPreview";
 import MarqueeBanner from "@/components/home/MarqueeBanner";
 import Pillars from "@/components/home/Pillars";
 import Story from "@/components/home/Story";
-import HoverReveal from "@/components/home/HoverReveal";
+import ExploreGrid from "@/components/home/ExploreGrid";
 import Showcase from "@/components/home/Showcase";
 import Testimonials from "@/components/home/Testimonials";
 import BrandSeal from "@/components/home/BrandSeal";
@@ -26,7 +26,7 @@ export default function HomePage() {
       <ComeIn>
         <Pillars />
       </ComeIn>
-      <HoverReveal />
+      <ExploreGrid />
       <Showcase />
       <ComeIn>
         <Testimonials />
