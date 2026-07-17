@@ -63,6 +63,17 @@ html.lenis body {
   color: var(--color-ink);
 }
 
+/* Hand the pointer over to the custom cursor on precise, larger screens */
+@media (pointer: fine) and (min-width: 1024px) {
+  @media (prefers-reduced-motion: no-preference) {
+    html,
+    a,
+    button {
+      cursor: none;
+    }
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

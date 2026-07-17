@@ -98,9 +98,10 @@ function GalleryTile({ src, label }: { src: string; label: string }) {
         loading="lazy"
         className="absolute inset-0 h-full w-full scale-105 object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-transparent to-transparent" />
-      <figcaption className="absolute bottom-5 left-6 z-10">
-        <span className="eyebrow text-cream/80">{label}</span>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+      <figcaption className="absolute bottom-5 left-6 z-10 flex items-center gap-2.5">
+        <span className="h-px w-6 bg-gold-soft" />
+        <span className="eyebrow text-white/90">{label}</span>
       </figcaption>
     </figure>
   );

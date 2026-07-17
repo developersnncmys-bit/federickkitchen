@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import ScrollProgress from "@/components/ScrollProgress";
+import CustomCursor from "@/components/CustomCursor";
 import { site } from "@/lib/site";
 
 const cormorant = Cormorant_Garamond({
@@ -138,6 +139,7 @@ export default function RootLayout({
 
         <SmoothScroll />
         <ScrollProgress />
+        <CustomCursor />
         <Nav />
         <main>{children}</main>
         <Footer />
