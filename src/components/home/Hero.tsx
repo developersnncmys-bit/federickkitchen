@@ -44,17 +44,17 @@ export default function Hero() {
       {/* Full-bleed sliding slideshow: images cross-slide with a slow Ken-Burns
           zoom; the whole layer also zooms in with scroll. */}
       <motion.div style={{ y: bgY, scale: bgScale }} className="absolute inset-0">
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           <motion.div
             key={slide}
-            initial={{ opacity: 0, x: "8%" }}
-            animate={{ opacity: 1, x: "0%" }}
-            exit={{ opacity: 0, x: "-8%" }}
-            transition={{ duration: 1.5, ease: EASE }}
+            initial={{ x: "100%", clipPath: "inset(0 0 0 100%)" }}
+            animate={{ x: "0%", clipPath: "inset(0 0 0 0%)" }}
+            exit={{ x: "-12%", scale: 1.05, opacity: 0 }}
+            transition={{ duration: 1.1, ease: EASE }}
             className="absolute inset-0"
           >
             <motion.div
-              initial={{ scale: 1.18 }}
+              initial={{ scale: 1.22 }}
               animate={{ scale: 1.02 }}
               transition={{ duration: 6.5, ease: "easeOut" }}
               className="absolute inset-0"
