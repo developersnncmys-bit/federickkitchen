@@ -1,5 +1,4 @@
 import Hero from "@/components/home/Hero";
-import ImageMarquee from "@/components/home/ImageMarquee";
 import TrustStrip from "@/components/home/TrustStrip";
 import WelcomeIntro from "@/components/home/WelcomeIntro";
 import RoomsPreview from "@/components/home/RoomsPreview";
@@ -17,7 +16,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ImageMarquee />
       <TrustStrip />
       <ComeIn>
         <WelcomeIntro />
