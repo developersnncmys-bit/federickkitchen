@@ -1,11 +1,12 @@
 import Hero from "@/components/home/Hero";
+import ImageMarquee from "@/components/home/ImageMarquee";
 import TrustStrip from "@/components/home/TrustStrip";
 import WelcomeIntro from "@/components/home/WelcomeIntro";
 import RoomsPreview from "@/components/home/RoomsPreview";
 import MarqueeBanner from "@/components/home/MarqueeBanner";
 import Pillars from "@/components/home/Pillars";
 import Story from "@/components/home/Story";
-import ExpandingGallery from "@/components/home/ExpandingGallery";
+import HoverReveal from "@/components/home/HoverReveal";
 import Showcase from "@/components/home/Showcase";
 import Testimonials from "@/components/home/Testimonials";
 import BrandSeal from "@/components/home/BrandSeal";
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ImageMarquee />
       <TrustStrip />
       <ComeIn>
         <WelcomeIntro />
@@ -26,7 +28,7 @@ export default function HomePage() {
       <ComeIn>
         <Pillars />
       </ComeIn>
-      <ExpandingGallery />
+      <HoverReveal />
       <Showcase />
       <ComeIn>
         <Testimonials />
