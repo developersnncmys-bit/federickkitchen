@@ -41,6 +41,30 @@ export function Reveal({
   );
 }
 
+/* --------------------- Section "come-in": rise + settle scale --------------------- */
+
+export function ComeIn({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: 64, scale: 0.965 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-12% 0px -12% 0px" }}
+      transition={{ duration: 1, delay, ease: EASE }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 /* ------------------------- Stagger container + child ------------------------- */
 
 export const staggerParent: Variants = {
