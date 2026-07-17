@@ -49,8 +49,8 @@ export default function AboutPage() {
       />
 
       {/* Story */}
-      <section className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-28">
-        <div className="grid gap-14 lg:grid-cols-[1fr_1.25fr] lg:gap-24">
+      <section className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-16">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:gap-12">
           <Reveal>
             <Frame
               tone="from-[#4a3a24] via-[#2a2013] to-[#12100a]"
@@ -82,7 +82,7 @@ export default function AboutPage() {
 
       {/* Contact */}
       <section id="contact" className="scroll-mt-28 border-t border-cream/10 bg-ink-soft">
-        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-6 py-14 md:px-10 md:py-16">
           <Reveal>
             <span className="eyebrow text-gold/70">Contact</span>
             <h2 className="mt-6 max-w-2xl font-display text-[clamp(2rem,4vw,3.5rem)] font-light leading-[1.05] text-cream">
@@ -90,7 +90,7 @@ export default function AboutPage() {
             </h2>
           </Reveal>
 
-          <div className="mt-14 grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
+          <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
             <div>
               <Stagger className="space-y-7">
                 <StaggerItem>

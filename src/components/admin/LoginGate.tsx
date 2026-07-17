@@ -38,7 +38,7 @@ export default function LoginGate() {
   }
 
   return (
-    <div className="flex min-h-[100svh] items-center justify-center px-6 py-32">
+    <div className="flex min-h-[100svh] items-center justify-center px-6 py-16">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}

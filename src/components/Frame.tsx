@@ -9,7 +9,7 @@ import ParallaxImage from "@/components/ParallaxImage";
  * against the scroll for a more premium, layered feel.
  */
 export default function Frame({
-  tone = "from-[#4a3a24] via-[#2a2013] to-[#12100a]",
+  tone = "from-[#efe6d4] via-[#e4d8bf] to-[#d8c9a8]",
   src,
   alt = "",
   label,
@@ -61,14 +61,14 @@ export default function Frame({
             />
           )}
           {scrim && (
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-ink/25" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent" />
           )}
         </>
       ) : (
         <>
           {/* Soft light source, so the panel reads as a lit scene not a swatch */}
-          <div className="absolute -top-1/3 left-1/4 h-[120%] w-2/3 rounded-full bg-gold/[0.07] blur-3xl" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_120%,rgba(0,0,0,0.55),transparent_65%)]" />
+          <div className="absolute -top-1/3 left-1/4 h-[120%] w-2/3 rounded-full bg-gold/20 blur-3xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_120%,rgba(111,90,60,0.22),transparent_65%)]" />
         </>
       )}
 

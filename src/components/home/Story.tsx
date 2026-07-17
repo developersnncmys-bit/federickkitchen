@@ -18,9 +18,9 @@ export default function Story() {
   return (
     <section
       ref={ref}
-      className="relative mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-40"
+      className="relative mx-auto max-w-[1400px] px-6 py-14 md:px-10 md:py-20"
     >
-      <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-24">
+      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
         <div className="relative">
           <div className="relative h-[420px] overflow-hidden rounded-2xl md:h-[560px]">
             <motion.div style={{ y: imgY }} className="absolute inset-[-8%]">

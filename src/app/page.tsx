@@ -1,5 +1,6 @@
 import Hero from "@/components/home/Hero";
-import Marquee from "@/components/home/Marquee";
+import TrustStrip from "@/components/home/TrustStrip";
+import RoomsPreview from "@/components/home/RoomsPreview";
 import Pillars from "@/components/home/Pillars";
 import Story from "@/components/home/Story";
 import ScrollGallery from "@/components/home/ScrollGallery";
@@ -12,9 +13,10 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Marquee />
-      <Pillars />
+      <TrustStrip />
+      <RoomsPreview />
       <Story />
+      <Pillars />
       <ScrollGallery />
       <Showcase />
       <Testimonials />

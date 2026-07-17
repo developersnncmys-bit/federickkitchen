@@ -9,9 +9,9 @@ export default function Footer() {
     <footer className="grain relative overflow-hidden border-t border-cream/10 bg-ink-soft">
       <div className="absolute -bottom-40 left-1/2 h-96 w-[70rem] -translate-x-1/2 rounded-full bg-gold/[0.06] blur-3xl" />
 
-      <div className="relative mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-28">
+      <div className="relative mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-16">
         <Reveal>
-          <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr_1fr]">
+          <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr]">
             <div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

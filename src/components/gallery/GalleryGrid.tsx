@@ -40,7 +40,7 @@ export default function GalleryGrid() {
   }, [open]);
 
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
+    <section className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-14">
       {/* Filters */}
       <div className="flex flex-wrap gap-2">
         {galleryCategories.map((c) => (

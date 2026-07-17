@@ -98,8 +98,8 @@ export default function DiningPage() {
       </section>
 
       {/* Private dining */}
-      <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
-        <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
+      <section className="mx-auto max-w-[1400px] px-6 py-14 md:px-10 md:py-16">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
           <div>
             <Reveal>
               <span className="eyebrow text-gold/70">Private dining</span>

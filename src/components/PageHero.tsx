@@ -7,7 +7,9 @@ export default function PageHero({
   title,
   copy,
   image,
-  tone = "from-[#2a2114] via-[#171410] to-[#0e0d0b]",
+  // Kept for API compatibility; the light theme uses one warm ivory wash
+  // instead of a per-page dark gradient.
+  tone: _tone,
 }: {
   eyebrow: string;
   title: string;
@@ -18,17 +20,16 @@ export default function PageHero({
   return (
     <section
       className={clsx(
-        "grain relative overflow-hidden bg-gradient-to-b pb-20 pt-40 md:pb-28 md:pt-52",
-        tone,
+        "grain relative overflow-hidden bg-gradient-to-b from-paper via-ink to-ink-soft pb-14 pt-28 md:pb-16 md:pt-36",
       )}
     >
       {image && (
         <>
-          <ParallaxImage src={image} eager imgClassName="opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/80 to-ink" />
+          <ParallaxImage src={image} eager imgClassName="opacity-25" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/85 to-ink" />
         </>
       )}
-      <div className="absolute left-1/2 top-0 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-gold/[0.07] blur-[100px]" />
+      <div className="absolute left-1/2 top-0 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-gold/[0.10] blur-[100px]" />
 
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-10">
         <Reveal y={16}>

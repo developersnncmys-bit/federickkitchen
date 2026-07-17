@@ -11,7 +11,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 export default function RoomList() {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-28">
+    <section className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-16">
       <div className="space-y-6">
         {rooms.map((room, i) => (
           <motion.article

@@ -79,7 +79,7 @@ export default function Dashboard({ records }: { records: Record_[] }) {
   }
 
   return (
-    <div className="min-h-[100svh] px-6 pb-24 pt-32 md:px-10 md:pt-40">
+    <div className="min-h-[100svh] px-6 pb-16 pt-32 md:px-10 md:pt-40">
       <div className="mx-auto max-w-[1400px]">
         {/* Header */}
         <div className="flex flex-wrap items-end justify-between gap-6">

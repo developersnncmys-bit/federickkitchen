@@ -19,7 +19,7 @@ export default function Testimonials() {
     ]);
 
   return (
-    <section className="grain relative overflow-hidden border-y border-cream/10 bg-ink-soft py-24 md:py-36">
+    <section className="grain relative overflow-hidden border-y border-cream/10 bg-ink-soft py-14 md:py-20">
       <div className="absolute left-1/2 top-1/2 h-[30rem] w-[60rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/[0.05] blur-[100px]" />
 
       <div className="relative mx-auto max-w-4xl px-6 text-center md:px-10">

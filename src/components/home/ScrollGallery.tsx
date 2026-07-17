@@ -52,11 +52,11 @@ export default function ScrollGallery() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden border-y border-cream/10 bg-ink py-24 md:py-32"
+      className="relative overflow-hidden border-y border-cream/10 bg-ink py-14 md:py-16"
     >
       <div className="absolute left-1/2 top-1/2 h-[40rem] w-[70rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/[0.05] blur-[130px]" />
 
-      <div className="relative mx-auto mb-14 max-w-[1400px] px-6 md:mb-20 md:px-10">
+      <div className="relative mx-auto mb-8 max-w-[1400px] px-6 md:mb-12 md:px-10">
         <Reveal>
           <span className="eyebrow text-gold/70">The estate, in passing</span>
         </Reveal>

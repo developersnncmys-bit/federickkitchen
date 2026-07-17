@@ -16,6 +16,11 @@ export default function Nav() {
 
   useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 40));
 
+  // The homepage hero is a dark photograph, so the nav rides light over it until
+  // you scroll; every other page opens on a light hero, so it stays dark there.
+  const isHome = pathname === "/";
+  const light = !scrolled && isHome;
+
   // Close the drawer on navigation, and lock the page behind it while open.
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
@@ -53,10 +58,22 @@ export default function Nav() {
               )}
             />
             <span className="flex flex-col">
-              <span className="font-display text-xl tracking-tight text-cream md:text-2xl">
+              <span
+                className={clsx(
+                  "font-display text-xl tracking-tight transition-colors md:text-2xl",
+                  light ? "text-white" : "text-cream",
+                )}
+              >
                 Frederick&rsquo;s
               </span>
-              <span className="eyebrow mt-1 text-gold/70 transition-colors group-hover:text-gold">
+              <span
+                className={clsx(
+                  "eyebrow mt-1 transition-colors",
+                  light
+                    ? "text-white/70 group-hover:text-white"
+                    : "text-gold/70 group-hover:text-gold",
+                )}
+              >
                 Kitchen · Chikmagaluru
               </span>
             </span>
@@ -71,7 +88,13 @@ export default function Nav() {
                   href={item.href}
                   className={clsx(
                     "relative py-1 text-sm transition-colors",
-                    active ? "text-cream" : "text-cream/60 hover:text-cream",
+                    light
+                      ? active
+                        ? "text-white"
+                        : "text-white/70 hover:text-white"
+                      : active
+                        ? "text-cream"
+                        : "text-cream/60 hover:text-cream",
                   )}
                 >
                   {item.label}
@@ -87,7 +110,10 @@ export default function Nav() {
             })}
             <Link
               href="/book"
-              className="group relative overflow-hidden rounded-full border border-gold/50 px-6 py-2.5 text-sm text-gold transition-colors hover:text-ink"
+              className={clsx(
+                "group relative overflow-hidden rounded-full border px-6 py-2.5 text-sm transition-colors hover:text-white",
+                light ? "border-white/50 text-white" : "border-gold/50 text-gold",
+              )}
             >
               <span className="relative z-10">Book</span>
               <span className="absolute inset-0 -translate-y-full bg-gold transition-transform duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
@@ -96,7 +122,7 @@ export default function Nav() {
 
           <button
             onClick={() => setOpen(true)}
-            className="p-2 text-cream lg:hidden"
+            className={clsx("p-2 lg:hidden", light ? "text-white" : "text-cream")}
             aria-label="Open menu"
           >
             <Menu size={22} />

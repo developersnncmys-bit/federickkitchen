@@ -31,7 +31,7 @@ export default function BookPage() {
 
 function EngineFallback() {
   return (
-    <div className="mx-auto max-w-[1400px] px-6 pb-24 md:px-10">
+    <div className="mx-auto max-w-[1400px] px-6 pb-16 md:px-10">
       <div className="mx-auto h-16 w-full max-w-md animate-pulse rounded-full bg-ink-soft" />
       <div className="mt-12 h-96 animate-pulse rounded-2xl bg-ink-soft" />
     </div>

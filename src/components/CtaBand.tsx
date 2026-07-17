@@ -10,10 +10,10 @@ export default function CtaBand({
   copy?: string;
 }) {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
+    <section className="mx-auto max-w-[1400px] px-6 py-14 md:px-10 md:py-16">
       <Reveal>
-        <div className="grain relative overflow-hidden rounded-3xl border border-gold/20 bg-gradient-to-br from-[#2a2114] via-[#191510] to-[#0e0d0b] px-8 py-16 text-center md:px-16 md:py-24">
-          <div className="absolute -top-24 left-1/2 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-gold/10 blur-[80px]" />
+        <div className="grain relative overflow-hidden rounded-3xl border border-gold/25 bg-gradient-to-br from-paper via-ink to-ink-soft px-8 py-12 text-center shadow-[0_30px_80px_-40px_rgba(42,33,23,0.45)] md:px-16 md:py-16">
+          <div className="absolute -top-24 left-1/2 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-gold/15 blur-[80px]" />
 
           <div className="relative">
             <h2 className="mx-auto max-w-3xl font-display text-[clamp(2rem,4.5vw,3.75rem)] font-light leading-[1.05] text-cream">

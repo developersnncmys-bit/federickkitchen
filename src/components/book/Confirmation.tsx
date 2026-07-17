@@ -21,8 +21,8 @@ export default function Confirmation({
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className="mx-auto max-w-2xl"
     >
-      <div className="grain relative overflow-hidden rounded-2xl border border-gold/25 bg-gradient-to-br from-[#2a2114] via-[#191510] to-[#0e0d0b] p-8 text-center md:p-14">
-        <div className="absolute -top-20 left-1/2 h-56 w-96 -translate-x-1/2 rounded-full bg-gold/10 blur-[70px]" />
+      <div className="grain relative overflow-hidden rounded-2xl border border-gold/25 bg-gradient-to-br from-paper via-ink to-ink-soft p-8 text-center shadow-[0_30px_80px_-40px_rgba(42,33,23,0.45)] md:p-14">
+        <div className="absolute -top-20 left-1/2 h-56 w-96 -translate-x-1/2 rounded-full bg-gold/15 blur-[70px]" />
 
         <div className="relative">
           <motion.span

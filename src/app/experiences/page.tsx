@@ -25,11 +25,11 @@ export default function ExperiencesPage() {
         tone="from-[#22303a] via-[#161d21] to-[#0e0d0b]"
       />
 
-      <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-28">
-        <div className="space-y-24 md:space-y-36">
+      <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-16">
+        <div className="space-y-16 md:space-y-20">
           {experiences.map((exp, i) => (
             <section key={exp.slug} id={exp.slug} className="scroll-mt-28">
-              <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+              <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-12">
                 <Reveal className={clsx(i % 2 === 1 && "lg:order-2")}>
                   <Frame
                     tone={exp.tone}
@@ -79,7 +79,7 @@ export default function ExperiencesPage() {
 
       {/* Enquiry */}
       <section className="border-t border-cream/10 bg-ink-soft">
-        <div className="mx-auto grid max-w-[1400px] gap-14 px-6 py-24 md:px-10 md:py-32 lg:grid-cols-[1fr_1.1fr] lg:gap-24">
+        <div className="mx-auto grid max-w-[1400px] gap-10 px-6 py-14 md:px-10 md:py-16 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
           <div>
             <Reveal>
               <span className="eyebrow text-gold/70">Plan it with us</span>

@@ -13,7 +13,7 @@ export default function MenuBoard() {
   const category = menu.find((c) => c.id === active)!;
 
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-28">
+    <section className="mx-auto max-w-[1400px] px-6 py-20 md:px-10 md:py-16">
       {/* Category tabs */}
       <div className="flex flex-wrap gap-2 border-b border-cream/10 pb-5">
         {menu.map((c) => (

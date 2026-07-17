@@ -27,7 +27,7 @@ export default function BookingEngine() {
   }
 
   return (
-    <div className="mx-auto max-w-[1400px] px-6 pb-24 md:px-10 md:pb-32">
+    <div className="mx-auto max-w-[1400px] px-6 pb-16 md:px-10 md:pb-32">
       {/* Switch */}
       <div className="mx-auto flex w-full max-w-md gap-1 rounded-full border border-cream/10 bg-ink-soft p-1.5">
         {(["room", "table"] as const).map((t) => (

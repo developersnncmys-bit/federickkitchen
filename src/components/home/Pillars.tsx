@@ -37,7 +37,7 @@ const pillars = [
 
 export default function Pillars() {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
+    <section className="mx-auto max-w-[1400px] px-6 py-14 md:px-10 md:py-16">
       <motion.div
         initial="hidden"
         whileInView="show"
