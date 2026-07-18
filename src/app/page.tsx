@@ -6,7 +6,7 @@ import MarqueeBanner from "@/components/home/MarqueeBanner";
 import Pillars from "@/components/home/Pillars";
 import Story from "@/components/home/Story";
 import ExploreGrid from "@/components/home/ExploreGrid";
-import Showcase from "@/components/home/Showcase";
+import StackCards from "@/components/home/StackCards";
 import Testimonials from "@/components/home/Testimonials";
 import BrandSeal from "@/components/home/BrandSeal";
 import CtaBand from "@/components/CtaBand";
@@ -27,7 +27,7 @@ export default function HomePage() {
         <Pillars />
       </ComeIn>
       <ExploreGrid />
-      <Showcase />
+      <StackCards />
       <ComeIn>
         <Testimonials />
       </ComeIn>
