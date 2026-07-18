@@ -8,6 +8,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import ScrollProgress from "@/components/ScrollProgress";
 import CustomCursor from "@/components/CustomCursor";
 import MotionShapes from "@/components/MotionShapes";
+import Prism3D from "@/components/Prism3D";
 import { site } from "@/lib/site";
 
 const cormorant = Cormorant_Garamond({
@@ -142,6 +143,7 @@ export default function RootLayout({
         <ScrollProgress />
         <CustomCursor />
         <MotionShapes fixed />
+        <Prism3D />
         <Nav />
         <main>{children}</main>
         <Footer />
