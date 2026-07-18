@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal, RevealWords } from "@/components/motion";
+import MotionShapes from "@/components/MotionShapes";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -48,8 +49,9 @@ const items = [
 
 export default function ExploreGrid() {
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 md:py-24">
-      <div className="flex flex-wrap items-end justify-between gap-6">
+    <section className="relative overflow-hidden py-16 md:py-24">
+      <MotionShapes />
+      <div className="relative z-10 mx-auto flex max-w-[1400px] flex-wrap items-end justify-between gap-6 px-6 md:px-10">
         <div>
           <Reveal>
             <span className="eyebrow text-gold/80">Explore</span>
@@ -65,7 +67,7 @@ export default function ExploreGrid() {
         whileInView="show"
         viewport={{ once: true, margin: "-8% 0px" }}
         variants={{ show: { transition: { staggerChildren: 0.1 } } }}
-        className="mt-10 grid auto-rows-[210px] grid-cols-1 gap-4 sm:grid-cols-2 md:auto-rows-[240px] lg:grid-cols-3"
+        className="relative z-10 mx-auto mt-10 grid max-w-[1400px] auto-rows-[210px] grid-cols-1 gap-4 px-6 sm:grid-cols-2 md:auto-rows-[240px] md:px-10 lg:grid-cols-3"
       >
         {items.map((it) => (
           <motion.div
